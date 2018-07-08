@@ -4,6 +4,49 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <h1>Hello World</h1>
+    <h1>Hallo world</h1>
+    <button onclick="array.forEach(myFunction1)">
+      click her1!
+    </button>
+    <button onclick="numbers.forEach(myFunction2)">
+        click her2!
+      </button>
+    <p id="demo"></p>
+    <j id ="foo"></j>
+    <button id="bar"></button>
+    <script>
+      demoP = document.getElementById("demo");
+      baz = document.getElementById("foo");
+      testbutton = document.getElementById("bar");
+      var numbers = [4, 9, 16, 25];
+
+      var array = [{
+        id:5,
+        type:"string",
+        name:"martin"
+      },
+      {
+        id:6,
+        type:"string",
+        name:"aksel"
+      }
+    ];
+
+      function myFunction1(item,index) {
+
+        if (item.name == "aksel") {
+          baz.innerHTML = baz.innerHTML + "id: " + item.id + "<br>" + "type: " + item.type + "<br>" + "name: " + item.name + "<br>";
+        }
+
+      }
+
+      function myFunction2(item,index) {
+
+        demoP.innerHTML = demoP.innerHTML + "index[" + index + "]: " + item + "<br>";
+        testbutton.innerHTML = testbutton.innerHTML + item;
+
+      }
+
+    </script>
   </body>
 </html>
